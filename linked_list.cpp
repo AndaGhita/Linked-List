@@ -38,29 +38,21 @@ public:
         head = NULL;
     }
 
-    /** Create a Node to hold the data, then put it at the head of the list.
-     * @param data The data for the new node
-    */
     int data;
     Storage* next;
 
     void push(int data){
     
-    /** Remove the head Node and return its data.
-     * 
-     * @param [out] The data (only valid if return true)
-     * @return True if there is a node to return
-    */
 
-    Storage* new_storage = new Storage(data);
+    Node* new_storage = new Nodde(data);
     if(this->head == NULL){
 
-        this->head = temp;
+        this->head = new_storage;
 
     }else{
 
-        temp->next =this->head;
-        this->head = temp;
+        new_storage->next =this->head;
+        this->head = new_storage;
 
     }
 
@@ -69,12 +61,7 @@ public:
 
     bool pop(int &data){
 
-          /**
-     * Return the data from the head Node, without removing it.
-     * 
-     * @param [out] The data (only valid if return true)
-     * @return True if text has been returned successfully (there is a node)
-    */   
+   
 
     if(this->head == NULL){
        
@@ -92,11 +79,7 @@ public:
    
     bool peek(int &data){
 
-          /**
-     * Return True if the list is empty, otherwise False  
-     * 
-     * @return True if the list is empty, otherwise False
-    */
+    
 
     if(this->head == NULL)
     {
@@ -115,14 +98,7 @@ public:
   
     bool isEmpty(){
 
-         /**
-     * Swaps the nodes at position i and j.
-     * 
-     * @return Returns true if successful, otherwise false (e.g. outside range)
-    */
-    /**  Frivillig, avkommentera om du implementerar. Avkommentera även i test_storage.cpp
-    bool swap(int i, int j);
-    */
+   
 
     if(this->head == NULL)
     {
